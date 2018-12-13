@@ -17,21 +17,20 @@ class PanelTabs extends Component {
       <Tabs defaultIndex={0} selectedTabClassName="active">
         <TabList>
           <ul className=" nav nav-tabs">
-
             <Tab className="nav-item">
-              <a onClick={this.handleClick} className="nav-link">Description</a>
+              <a onClick={this.handleClick} className="nav-link" href="/">Description</a>
             </Tab>
             <Tab className="nav-item">
-              <a onClick={this.handleClick}  className="nav-link">Reviews</a>
+              <a onClick={this.handleClick}  className="nav-link" href="/">Reviews</a>
             </Tab>
             <Tab className="nav-item">
-              <a onClick={this.handleClick} className="nav-link">Specs</a>
+              <a onClick={this.handleClick} className="nav-link" href="/">Specs</a>
             </Tab>
           </ul>
         </TabList>
-        <TabPanel></TabPanel>
-        <TabPanel></TabPanel>
-        <TabPanel></TabPanel>
+        <TabPanel><Description description={this.props.info.description}/></TabPanel>
+        <TabPanel><Reviews reviews={this.props.info.reviews}/></TabPanel>
+        <TabPanel><Specs/></TabPanel>
         </Tabs>
       </div>
     );

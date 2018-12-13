@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import './index.css';
 
 
-class Specs extends Component {
+class Description extends Component {
   render() {
     return (
-      <div className="Specs">
-      
+      <div className="Description">
+      <p>{this.props.description}</p>
       </div>
     );
   }
 }
 
-export default Specs;
+export default Description;

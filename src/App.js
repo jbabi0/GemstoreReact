@@ -24,14 +24,21 @@ class App extends Component {
     this.setState({
       products: PRODUCTS
     });
-
   }
+
+  // add product to cart using id, function written here because state is stored within this component
+  addItem = id => {
+    console.log(id);
+  }
+
+
+
   render() {
     return (
       <div className="App">
       <Navbar />
       <Switch>
-        <Route exact path='/' render={() => <Home products={this.state.products} />} />
+        <Route exact path='/' render={() => <Home addItem={this.addItem} products={this.state.products} />} />
         <Route exact path='/checkout' render={() => <Checkout />} />
       </Switch>
       </div>
