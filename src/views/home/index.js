@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-
 import './index.css';
+import ProductList from '../../components/productList';
 
 class Home extends Component {
+
   render() {
     return (
       <div className="Home">
-      <h1>Home page</h1>
+        <div className="container">
+          <ProductList products={this.props.products}/>
+        </div>
       </div>
     );
   }
