@@ -27,8 +27,13 @@ class App extends Component {
   }
 
   // add product to cart using id, function written here because state is stored within this component
-  addItem = id => {
-    console.log(id);
+  addItem = product => {
+    let cart = this.state.cart;
+    cart.push(product);
+    this.setState({
+      cart: cart
+    });
+    console.log(this.state.cart);
   }
 
 
